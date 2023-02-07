@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -359,6 +360,28 @@
                             <constraint firstItem="AUu-ad-daU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mH3-eQ-2dc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="number0" destination="gSd-bT-3K5" id="ZRd-Fk-m8j"/>
+                        <outlet property="number1" destination="3ux-Kg-Dva" id="JK8-lW-JHo"/>
+                        <outlet property="number2" destination="Z3c-WA-5PR" id="gJV-Nl-dbx"/>
+                        <outlet property="number3" destination="pXZ-gx-5ac" id="K5V-ca-ocS"/>
+                        <outlet property="number4" destination="XWA-H6-vBz" id="Ibs-kj-rzZ"/>
+                        <outlet property="number5" destination="1ga-94-Ic2" id="Ans-0P-dFq"/>
+                        <outlet property="number6" destination="EdC-r4-tfl" id="Dny-uF-Foo"/>
+                        <outlet property="number7" destination="Buy-to-gwB" id="GcJ-V9-pZp"/>
+                        <outlet property="number8" destination="nS5-nq-TZk" id="J9A-XZ-e5l"/>
+                        <outlet property="number9" destination="OVI-pg-gJd" id="sgr-Ce-jcE"/>
+                        <outlet property="numberDecimal" destination="wSl-Yl-8Jd" id="ORO-qc-XcR"/>
+                        <outlet property="operatorAC" destination="Y2Z-tO-Gxv" id="cYS-0E-v8K"/>
+                        <outlet property="operatorMinus" destination="cZH-ee-off" id="42E-fX-GeR"/>
+                        <outlet property="operatorMultiply" destination="zDE-sI-8wk" id="ty1-DR-4dV"/>
+                        <outlet property="operatorPercentage" destination="SH9-pA-SxC" id="8f4-LA-qB9"/>
+                        <outlet property="operatorPlus" destination="VC7-fx-vaZ" id="aMW-QJ-zFy"/>
+                        <outlet property="operatorPlusMinus" destination="bbf-oP-6fQ" id="u7w-VG-Qrz"/>
+                        <outlet property="operatorResult" destination="CW2-hy-TVR" id="Rh6-JB-7vn"/>
+                        <outlet property="opertorDivide" destination="8Rs-Pk-q4M" id="3lB-tw-UUa"/>
+                        <outlet property="resultLabel" destination="X7T-LP-QJH" id="oBN-Bs-BHm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
