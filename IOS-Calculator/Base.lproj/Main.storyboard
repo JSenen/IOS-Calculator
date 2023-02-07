@@ -42,11 +42,11 @@
                                                     <constraint firstAttribute="width" secondItem="bbf-oP-6fQ" secondAttribute="height" multiplier="1:1" id="dCT-N9-6oX"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="+-">
+                                                <buttonConfiguration key="configuration" style="plain" title="±">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="47"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -60,7 +60,7 @@
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="47"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="40"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -70,7 +70,7 @@
                                                     <constraint firstAttribute="width" secondItem="8Rs-Pk-q4M" secondAttribute="height" multiplier="1:1" id="sdb-F2-NM6"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="/">
+                                                <buttonConfiguration key="configuration" style="plain" title="÷">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.58039215686274503" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </backgroundConfiguration>
@@ -136,7 +136,7 @@
                                                     <constraint firstAttribute="width" secondItem="zDE-sI-8wk" secondAttribute="height" multiplier="1:1" id="L4z-6T-lAu"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="x">
+                                                <buttonConfiguration key="configuration" style="plain" title="×">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.99607843139999996" green="0.58039215690000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </backgroundConfiguration>
@@ -202,7 +202,7 @@
                                                     <constraint firstAttribute="width" secondItem="cZH-ee-off" secondAttribute="height" multiplier="1:1" id="5Mn-t7-C2v"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                                <buttonConfiguration key="configuration" style="plain" title="−">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.99607843139999996" green="0.58039215690000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </backgroundConfiguration>
