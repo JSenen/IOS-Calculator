@@ -41,42 +41,84 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //Poner los botones redondos
+        number0.round()
+        number1.round()
+        number2.round()
+        number3.round()
+        number4.round()
+        number5.round()
+        number6.round()
+        number7.round()
+        number8.round()
+        number9.round()
+        numberDecimal.round()
+        
     }
     
     //MARK: -Button Actions
     
-    @IBAction func operatonACAction(_ sender: Any) {
+    @IBAction func operatonACAction(_ sender: UIButton) {
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
         
     }
-    @IBAction func operatorPlusMinusAction(_ sender: Any) {
+    @IBAction func operatorPlusMinusAction(_ sender: UIButton) {
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
         
     }
-    @IBAction func operatorPercentageAction(_ sender: Any) {
+    @IBAction func operatorPercentageAction(_ sender: UIButton) {
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
         
     }
-    @IBAction func opertorDivideAction(_ sender: Any) {
+    @IBAction func opertorDivideAction(_ sender: UIButton) {
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
         
     }
-    @IBAction func operatorMultiplyAction(_ sender: Any) {
+    @IBAction func operatorMultiplyAction(_ sender: UIButton) {
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
         
     }
-    @IBAction func operatorMinusAction(_ sender: Any) {
+    @IBAction func operatorMinusAction(_ sender: UIButton) {
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
         
     }
-    @IBAction func operatorPlusAction(_ sender: Any) {
+    @IBAction func operatorPlusAction(_ sender: UIButton) {
         
+        //Efecto brillo en boton al pulsar
+        sender.shine()
     }
-    @IBAction func operatorResultAction(_ sender: Any) {
+    @IBAction func operatorResultAction(_ sender: UIButton) {
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
         
     }
     
-    @IBAction func numberDecimalAction(_ sender: Any) {
+    @IBAction func numberDecimalAction(_ sender: UIButton) {
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
     }
     
     //Acciones para los botones del 0 al 9
     @IBAction func numberAction(_ sender: UIButton) {
         print(sender.tag)
+        
+        //Efecto brillo en boton al pulsar
+        sender.shine()
         
     }
     
