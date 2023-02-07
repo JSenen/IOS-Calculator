@@ -13,6 +13,7 @@
 		872A218B2992CD9E00AD371A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872A21892992CD9E00AD371A /* Main.storyboard */; };
 		872A218D2992CDA000AD371A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 872A218C2992CDA000AD371A /* Assets.xcassets */; };
 		872A21902992CDA000AD371A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872A218E2992CDA000AD371A /* LaunchScreen.storyboard */; };
+		87A6ECAD2992F6D500E9FCBD /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6ECAC2992F6D500E9FCBD /* UIButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		872A218C2992CDA000AD371A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		872A218F2992CDA000AD371A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		872A21912992CDA000AD371A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A6ECAC2992F6D500E9FCBD /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				872A218C2992CDA000AD371A /* Assets.xcassets */,
 				872A218E2992CDA000AD371A /* LaunchScreen.storyboard */,
 				872A21912992CDA000AD371A /* Info.plist */,
+				87A6ECAC2992F6D500E9FCBD /* UIButtonExtension.swift */,
 			);
 			path = "IOS-Calculator";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				872A21882992CD9E00AD371A /* ViewController.swift in Sources */,
+				87A6ECAD2992F6D500E9FCBD /* UIButtonExtension.swift in Sources */,
 				872A21842992CD9E00AD371A /* AppDelegate.swift in Sources */,
 				872A21862992CD9E00AD371A /* SceneDelegate.swift in Sources */,
 			);
