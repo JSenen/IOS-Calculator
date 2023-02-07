@@ -43,7 +43,41 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    //MARK: -Button Actions
+    
+    @IBAction func operatonACAction(_ sender: Any) {
+        
+    }
+    @IBAction func operatorPlusMinusAction(_ sender: Any) {
+        
+    }
+    @IBAction func operatorPercentageAction(_ sender: Any) {
+        
+    }
+    @IBAction func opertorDivideAction(_ sender: Any) {
+        
+    }
+    @IBAction func operatorMultiplyAction(_ sender: Any) {
+        
+    }
+    @IBAction func operatorMinusAction(_ sender: Any) {
+        
+    }
+    @IBAction func operatorPlusAction(_ sender: Any) {
+        
+    }
+    @IBAction func operatorResultAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func numberDecimalAction(_ sender: Any) {
+    }
+    
+    //Acciones para los botones del 0 al 9
+    @IBAction func numberAction(_ sender: UIButton) {
+        print(sender.tag)
+        
+    }
+    
 }
-
