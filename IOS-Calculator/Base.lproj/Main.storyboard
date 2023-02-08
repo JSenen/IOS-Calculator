@@ -430,13 +430,13 @@
                         <outlet property="number9" destination="OVI-pg-gJd" id="sgr-Ce-jcE"/>
                         <outlet property="numberDecimal" destination="wSl-Yl-8Jd" id="ORO-qc-XcR"/>
                         <outlet property="operatorAC" destination="Y2Z-tO-Gxv" id="cYS-0E-v8K"/>
+                        <outlet property="operatorDivide" destination="8Rs-Pk-q4M" id="3lB-tw-UUa"/>
                         <outlet property="operatorMinus" destination="cZH-ee-off" id="42E-fX-GeR"/>
                         <outlet property="operatorMultiply" destination="zDE-sI-8wk" id="ty1-DR-4dV"/>
                         <outlet property="operatorPercentage" destination="SH9-pA-SxC" id="8f4-LA-qB9"/>
                         <outlet property="operatorPlus" destination="VC7-fx-vaZ" id="aMW-QJ-zFy"/>
                         <outlet property="operatorPlusMinus" destination="bbf-oP-6fQ" id="u7w-VG-Qrz"/>
                         <outlet property="operatorResult" destination="CW2-hy-TVR" id="Rh6-JB-7vn"/>
-                        <outlet property="opertorDivide" destination="8Rs-Pk-q4M" id="3lB-tw-UUa"/>
                         <outlet property="resultLabel" destination="X7T-LP-QJH" id="oBN-Bs-BHm"/>
                     </connections>
                 </viewController>

@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var operatorAC: UIButton!
     @IBOutlet weak var operatorPlusMinus: UIButton!
     @IBOutlet weak var operatorPercentage: UIButton!
-    @IBOutlet weak var opertorDivide: UIButton!
+    @IBOutlet weak var operatorDivide: UIButton!
     @IBOutlet weak var operatorMultiply: UIButton!
     @IBOutlet weak var operatorMinus: UIButton!
     @IBOutlet weak var operatorPlus: UIButton!
@@ -50,8 +50,8 @@ class ViewController: UIViewController {
     
     private let kDecimalSeparator = Locale.current.decimalSeparator!
     private let kMaxLenght = 9
-    private let kMaxValue:Double = 999999999
-    private let kMinValue:Double = 0.00000001
+    private let kTotal = "total"
+
     
     //Define tipo de operaciones soporta la calculadora
     private enum OperationType {
@@ -64,6 +64,21 @@ class ViewController: UIViewController {
         let locale = Locale.current
         formatter.groupingSeparator = ""
         formatter.decimalSeparator = locale.decimalSeparator
+        formatter.numberStyle = .decimal
+        formatter.maximumIntegerDigits = 100
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 100
+        return formatter
+        
+    }()
+    
+    private let auxTotalFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = ""
+        formatter.decimalSeparator = ""
+        formatter.maximumIntegerDigits = 100
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 100
         formatter.numberStyle = .decimal
         return formatter
         
@@ -111,6 +126,8 @@ class ViewController: UIViewController {
         
         numberDecimal.setTitle(kDecimalSeparator, for: .normal)
         
+        total = UserDefaults.standard.double(forKey: kTotal)
+        
         result()
         
     }
@@ -145,27 +162,36 @@ class ViewController: UIViewController {
         
     }
     @IBAction func opertorDivideAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .divide
+        sender.selectOperation(true)
         
         //Efecto brillo en boton al pulsar
         sender.shine()
         
     }
     @IBAction func operatorMultiplyAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .multiply
+        sender.selectOperation(true)
         
         //Efecto brillo en boton al pulsar
         sender.shine()
         
     }
     @IBAction func operatorMinusAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .minus
+        sender.selectOperation(true)
         
         //Efecto brillo en boton al pulsar
         sender.shine()
@@ -173,9 +199,13 @@ class ViewController: UIViewController {
     }
     @IBAction func operatorPlusAction(_ sender: UIButton) {
         
-        result()
+        if operation != .none {
+            result()
+        }
+        
         operating = true
         operation = .plus
+        sender.selectOperation(true)
         
         
         //Efecto brillo en boton al pulsar
@@ -190,12 +220,14 @@ class ViewController: UIViewController {
     
     @IBAction func numberDecimalAction(_ sender: UIButton) {
         
-        let currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
+        let currentTemp = auxTotalFormatter.string(from: NSNumber(value: temp))!
         if !operating && currentTemp.count >= kMaxLenght {
             return
         }
         resultLabel.text = resultLabel.text! + kDecimalSeparator
         decimal = true
+        
+        selectVisualOperation()
         //Efecto brillo en boton al pulsar
         sender.shine()
     }
@@ -205,10 +237,12 @@ class ViewController: UIViewController {
         print(sender.tag) //Muestra en consola el tag
         
         operatorAC.setTitle("C", for: .normal)
-        var currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
+        var currentTemp = auxTotalFormatter.string(from: NSNumber(value: temp))!
         if !operating && currentTemp.count >= kMaxLenght {
             return
         }
+        
+        currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
         
         //Si se selecciona una operación
         
@@ -231,6 +265,7 @@ class ViewController: UIViewController {
         temp = Double(currentTemp + String(number))!
         resultLabel.text = printFormatter.string(from: NSNumber(value: temp))
         
+        selectVisualOperation()
         //Efecto brillo en boton al pulsar
         sender.shine()
         
@@ -276,8 +311,61 @@ class ViewController: UIViewController {
         }
         
         //Formateo en pantalla
-        if total <= kMaxValue || total >= kMinValue {
+        if let currentTotal = auxTotalFormatter.string(from: NSNumber(value: total)), currentTotal.count  > kMaxLenght{
+            resultLabel.text = printScientificFormatter.string(from: NSNumber(value: total))
+        } else {
             resultLabel.text = printFormatter.string(from: NSNumber(value: total))
+        }
+        
+        operation = .none
+        selectVisualOperation()
+        UserDefaults.standard.set(total, forKey: kTotal)
+    }
+    //Mostrar de forma visual la operacion seleccionada
+    private func selectVisualOperation(){
+        if !operating {
+            operatorPlus.selectOperation(false)
+            operatorMinus.selectOperation(false)
+            operatorMultiply.selectOperation(false)
+            operatorDivide.selectOperation(false)
+            
+            
+        } else {
+            switch operation {
+                
+            case .none, .percentage:operatorPlus.selectOperation(false)
+                operatorMinus.selectOperation(false)
+                operatorMultiply.selectOperation(false)
+                operatorDivide.selectOperation(false)
+                break
+            case .divide:
+                operatorPlus.selectOperation(false)
+                operatorMinus.selectOperation(false)
+                operatorMultiply.selectOperation(false)
+                operatorDivide.selectOperation(true)
+                break
+            case .multiply:
+                operatorPlus.selectOperation(false)
+                operatorMinus.selectOperation(false)
+                operatorMultiply.selectOperation(true)
+                operatorDivide.selectOperation(false)
+                break
+            case .minus:
+                operatorPlus.selectOperation(false)
+                operatorMinus.selectOperation(true)
+                operatorMultiply.selectOperation(false)
+                operatorDivide.selectOperation(false)
+                break
+            case .plus:
+                operatorPlus.selectOperation(true)
+                operatorMinus.selectOperation(false)
+                operatorMultiply.selectOperation(false)
+                operatorDivide.selectOperation(false)
+                break
+           
+            }
+        
+            
         }
         
     }
